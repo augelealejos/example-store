@@ -4,12 +4,15 @@ import { COLORS } from "../../themes";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
+    backgroundColor: COLORS.white,
   },
   categoryContainer: {
-    flex: 1,
+    marginTop: 15,
+    marginHorizontal: 15,
   },
   listCategory: {
     paddingBottom: 20,
+    gap: 15,    
+    fontFamily: 'Rubik-Bold',
   },
 });

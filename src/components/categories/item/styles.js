@@ -4,6 +4,15 @@ import { COLORS } from "../../../themes";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    borderRadius: 20,
+    shadowColor: COLORS.black,
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
   },
   imageBackground: {
     width: "100%",
@@ -12,7 +21,7 @@ export const styles = StyleSheet.create({
   },
   categoryName: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: 'Rubik-Bold',
     color: COLORS.white,
     padding: 20,
   },

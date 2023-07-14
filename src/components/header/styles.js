@@ -9,10 +9,18 @@ export const styles = StyleSheet.create({
     height: 80,
     justifyContent: "center",
     alignItems: "center",
+    shadowColor: COLORS.black,
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
   },
   title: {
     fontSize: 20,
     color: COLORS.white,
-    fontWeight: "bold",
+    fontFamily: 'Rubik-Bold',
   },
 });
