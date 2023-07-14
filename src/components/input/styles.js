@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 10,
     color: COLORS.black,
     fontSize: 14,
-    height: 35,    
-    fontFamily: 'Rubik-Regular',
+    height: 35,
+    fontFamily: "Rubik-Regular",
   },
 });

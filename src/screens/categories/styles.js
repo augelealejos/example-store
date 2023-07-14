@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   },
   listCategory: {
     paddingBottom: 20,
-    gap: 15,    
-    fontFamily: 'Rubik-Bold',
+    gap: 15,
+    fontFamily: "Rubik-Bold",
   },
 });

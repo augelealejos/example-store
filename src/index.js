@@ -1,10 +1,10 @@
-import { useFonts } from 'expo-font';
+import { useFonts } from "expo-font";
 import { useState } from "react";
 import { SafeAreaView, View, ActivityIndicator } from "react-native";
 import { Header } from "./components";
 import { Categories, Products } from "./screens";
 import { styles } from "./styles";
-import { FONTS, COLORS } from './themes';
+import { FONTS, COLORS } from "./themes";
 
 const categoryDefault = {
   categoryId: null,
@@ -13,10 +13,10 @@ const categoryDefault = {
 
 export default function App() {
   const [loaded] = useFonts({
-    [FONTS.regular]: require('../assets/fonts/Rubik-Regular.ttf'),
-    [FONTS.bold]: require('../assets/fonts/Rubik-Bold.ttf'),
-    [FONTS.medium]: require('../assets/fonts/Rubik-Italic.ttf'),
-    [FONTS.light]: require('../assets/fonts/Rubik-Light.ttf'),
+    [FONTS.regular]: require("../assets/fonts/Rubik-Regular.ttf"),
+    [FONTS.bold]: require("../assets/fonts/Rubik-Bold.ttf"),
+    [FONTS.medium]: require("../assets/fonts/Rubik-Italic.ttf"),
+    [FONTS.light]: require("../assets/fonts/Rubik-Light.ttf"),
   });
   const [isCategorySelected, setIsCategorySelected] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(categoryDefault);
