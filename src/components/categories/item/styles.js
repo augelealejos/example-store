@@ -1,5 +1,4 @@
-import { StyleSheet } from "react-native";
-import { COLORS } from "../../../themes";
+import { StyleSheet } from "react-native";import { COLORS } from "../../../themes";
 
 export const styles = StyleSheet.create({
   container: {
@@ -21,7 +20,7 @@ export const styles = StyleSheet.create({
   },
   categoryName: {
     fontSize: 20,
-    fontFamily: 'Rubik-Bold',
+    fontFamily: "Rubik-Bold",
     color: COLORS.white,
     padding: 20,
   },

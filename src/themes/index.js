@@ -1,2 +1,1 @@
-export * from "./colors/index";
-export * from './fonts/index';
+export * from "./colors/index";export * from "./fonts/index";
