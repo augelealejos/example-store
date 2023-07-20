@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLORS } from "../../themes";
+import { COLORS, FONTS } from "../../themes";
 
 export const styles = StyleSheet.create({
   container: {
@@ -13,6 +13,9 @@ export const styles = StyleSheet.create({
   listCategory: {
     paddingBottom: 20,
     gap: 15,
-    fontFamily: "Rubik-Bold",
+    fontFamily: FONTS.bold,
+  },
+  categoryItemLandscape: {
+    height: 100,
   },
 });
