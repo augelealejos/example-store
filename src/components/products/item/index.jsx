@@ -2,12 +2,19 @@ import React from "react";
 import { View, Text, TouchableOpacity, ImageBackground } from "react-native";
 import { styles } from "./styles";
 
-function ProductItem({ item, categorySelected }) {
+function ProductItem({ navigation, item, color }) {
+  const onSelectProduct = ({ productId, name }) => {
+    navigation.navigate("ProductDetail", { productId, color, name });
+  };
+
   return (
-    <TouchableOpacity onPress={() => null} style={styles.productContainer}>
+    <TouchableOpacity
+      onPress={() => onSelectProduct({ productId: item.id, name: item.name })}
+      style={styles.productContainer}
+    >
       <ImageBackground
         source={{ uri: item.image }}
-        style={[styles.productImage, { backgroundColor: categorySelected.color }]}
+        style={[styles.productImage, { backgroundColor: color }]}
         resizeMethod="resize"
         resizeMode="contain"
       />

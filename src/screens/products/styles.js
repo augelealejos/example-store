@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native";
-import { COLORS } from "../../themes";
+import { COLORS, FONTS } from "../../themes";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginHorizontal: 15,
+    marginTop: 15,
   },
   header: {
     flexDirection: "row",
@@ -18,7 +19,7 @@ export const styles = StyleSheet.create({
   },
   goBackText: {
     fontSize: 14,
-    fontFamily: "Rubik-Light",
+    fontFamily: FONTS.light,
     color: COLORS.black,
   },
   products: {

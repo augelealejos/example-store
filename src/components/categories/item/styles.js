@@ -20,16 +20,16 @@ export const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   imageBackgroundTablet: {
-    width: '100%',
+    width: "100%",
     height: 250,
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   },
   categoryName: {
     fontSize: 20,
     fontFamily: FONTS.bold,
     color: COLORS.white,
     padding: 20,
-  }, 
+  },
   categoryNameTablet: {
     fontSize: 35,
     fontFamily: FONTS.bold,

@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLORS } from "../../../themes";
+import { COLORS, FONTS } from "../../../themes";
 
 export const styles = StyleSheet.create({
   productsContent: {
@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
   },
   productContainer: {
     backgroundColor: COLORS.white,
-    borderRadius: 10,
+    borderRadius: 20,
     width: "45%",
     marginHorizontal: 10,
     shadowColor: COLORS.black,
@@ -32,10 +32,10 @@ export const styles = StyleSheet.create({
   },
   productName: {
     fontSize: 14,
-    fontFamily: "Rubik-Light",
+    fontFamily: FONTS.light,
   },
   productPrice: {
     fontSize: 15,
-    fontFamily: "Rubik-Light",
+    fontFamily: FONTS.light,
   },
 }); 

@@ -6,12 +6,13 @@ import { styles } from "./styles";
 import { COLORS } from "../../themes";
 import PRODUCTS from "../../constants/data/products.json";
 
-function Product({ onHandleGoBack, categorySelected }) {
+function Product({ navigation, route }) {
+  const { categoryId, color } = route.params;
   const [search, setSearch] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [borderColor, setBorderColor] = useState(COLORS.primary);
   const filteredProductsByCategory = PRODUCTS.filter(
-    (product) => product.categoryId === categorySelected.categoryId
+    (product) => product.categoryId === categoryId
   );
 
   const onHandleBlur = () => {};
@@ -34,10 +35,6 @@ function Product({ onHandleGoBack, categorySelected }) {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.goBack} onPress={onHandleGoBack}>
-        <Ionicons name="arrow-back" size={30} color={COLORS.primary} />
-        <Text style={styles.goBackText}>Go back</Text>
-      </TouchableOpacity>
       <View style={styles.header}>
         <Input
           onHandleBlur={onHandleBlur}
@@ -61,7 +58,7 @@ function Product({ onHandleGoBack, categorySelected }) {
         style={styles.products}
         data={search.length > 0 ? filteredProducts : filteredProductsByCategory}
         renderItem={({ item }) => (
-          <ProductItem item={item} categorySelected={categorySelected} />
+          <ProductItem item={item} color={color} navigation={navigation} />
         )}
         contentContainerStyle={styles.productsContent}
         keyExtractor={(item) => item.id.toString()}
