@@ -1,11 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native";
-
-import ShopNavigator from "./shop/shop";
+import TabsNavigator from "./tabs/tabs";
 
 function RootNavigator() {
   return (
     <NavigationContainer>
-      <ShopNavigator />
+      <TabsNavigator />
     </NavigationContainer>
   );
 }
