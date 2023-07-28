@@ -2,16 +2,18 @@ import { Ionicons } from "@expo/vector-icons";import { useState } from "react";
 import { View, Text, TouchableOpacity, FlatList, ImageBackground } from "react-native";
 import { Input } from "../../components";
 import ProductItem from "../../components/products/item/index";
+import { useSelector } from "react-redux";
 import { styles } from "./styles";
 import { COLORS } from "../../themes";
-import PRODUCTS from "../../constants/data/products.json";
+
 
 function Product({ navigation, route }) {
   const { categoryId, color } = route.params;
+  const products = useSelector((state) => state.products.data);
   const [search, setSearch] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [borderColor, setBorderColor] = useState(COLORS.primary);
-  const filteredProductsByCategory = PRODUCTS.filter(
+  const filteredProductsByCategory = products.filter(
     (product) => product.categoryId === categoryId
   );
 
