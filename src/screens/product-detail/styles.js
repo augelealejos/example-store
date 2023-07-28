@@ -63,4 +63,27 @@ export const styles = StyleSheet.create({
     color: COLORS.white,
     fontFamily: FONTS.bold,
   },
+  containerButton: {
+    marginVertical: 10,
+  },
+  addToCartButton: {
+    width: "100%",
+    padding: 15,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    shadowColor: COLORS.black,
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
+  },
+  addToCartText: {
+    fontFamily: FONTS.bold,
+    fontSize: 16,
+    color: COLORS.white,
+  },
 });
