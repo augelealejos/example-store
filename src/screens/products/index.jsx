@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";import { useState } from "react";
 import { View, Text, TouchableOpacity, FlatList, ImageBackground } from "react-native";
 import { Input } from "../../components";
+import { useGetProductsByCategoryQuery } from "../../store/products/api";
 import ProductItem from "../../components/products/item/index";
 import { useSelector } from "react-redux";
 import { styles } from "./styles";
@@ -9,13 +10,11 @@ import { COLORS } from "../../themes";
 
 function Product({ navigation, route }) {
   const { categoryId, color } = route.params;
-  const products = useSelector((state) => state.products.data);
+  const { data, error, isLoading } = useGetProductsByCategoryQuery(categoryId);
   const [search, setSearch] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [borderColor, setBorderColor] = useState(COLORS.primary);
-  const filteredProductsByCategory = products.filter(
-    (product) => product.categoryId === categoryId
-  );
+  const filteredProductsByCategory = data?.filter((product) => product.categoryId === categoryId);
 
   const onHandleBlur = () => {};
   const onHandleChangeText = (text) => {

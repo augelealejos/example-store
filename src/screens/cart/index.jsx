@@ -41,7 +41,7 @@ const Cart = () => {
         keyExtractor={(item) => item.id.toString()}
         style={styles.listContainer}
       />
-            <View style={styles.footerContainer}>
+      <View style={styles.footerContainer}>
         <TouchableOpacity onPress={() => null} style={styles.checkoutButton}>
           <Text style={styles.checkoutButtonText}>Checkout</Text>
           <View style={styles.totalContainer}>

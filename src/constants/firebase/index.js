@@ -1,0 +1,1 @@
+export const URL_BASE_FIREBASE_REALTIME_DATABASE = "https://example-store-4a997-default-rtdb.firebaseio.com/";
