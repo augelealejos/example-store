@@ -46,7 +46,7 @@ const TabsNavigator = () => {
           ),
           tabBarBadge: 2,
           tabBarBadgeStyle: {
-            backgroundColor: COLORS.secodary,
+            backgroundColor: COLORS.success,
             color: COLORS.white,
             fontFamily: FONTS.regular,
             fontSize: 11,
