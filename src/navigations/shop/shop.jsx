@@ -67,13 +67,7 @@ function ShopNavigator() {
         name="SettingsStack"
         component={SettingsNavigator}
         options={({ navigation, route }) => ({
-          headerLeft: () => (
-            <TouchableOpacity style={styles.goBack} onPress={() => navigation.goBack()}>
-              <Ionicons name="arrow-back" size={30} color={COLORS.white} />
-            </TouchableOpacity>
-          ),
-          title: "Settings",
-          headerRight: null,
+          headerShown: false,
         })}
       />
     </Stack.Navigator>

@@ -4,3 +4,4 @@ export { default as ProductItem } from "./categories/item/index";
 export { default as Input } from "./input";
 export { default as CartItem } from "./cart/item/index";
 export { default as OrderItem } from "./order/item/index";
+export { default as MenuItem } from "./menu-item/index";
