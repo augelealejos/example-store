@@ -1,4 +1,4 @@
-import { ActivityIndicator, FlatList, SafeAreaView, View } from "react-native";
+import { ActivityIndicator, FlatList, View } from "react-native";
 import { CategoryItem } from "../../components";
 import { useSelector } from "react-redux";
 import { styles } from "./styles";
@@ -24,7 +24,7 @@ function Categories({ navigation }) {
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.container}>
         <FlatList
           data={data}
@@ -47,7 +47,7 @@ function Categories({ navigation }) {
           showsVerticalScrollIndicator={false}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 

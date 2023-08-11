@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";import { useState } from "react";
-import { View, Text, TouchableOpacity, FlatList, ImageBackground } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, ImageBackground, ActivityIndicator, } from "react-native";
 import { Input } from "../../components";
 import { useGetProductsByCategoryQuery } from "../../store/products/api";
 import ProductItem from "../../components/products/item/index";
@@ -33,6 +33,13 @@ function Product({ navigation, route }) {
     setSearch("");
     setFilteredProducts([]);
   };
+
+  if (isLoading)
+  return (
+    <View style={styles.containerLoader}>
+      <ActivityIndicator size="large" color={COLORS.primary} />
+    </View>
+  );
 
   return (
     <View style={styles.container}>
