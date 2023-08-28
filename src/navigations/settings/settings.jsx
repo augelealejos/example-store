@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   goBackText: {
     fontSize: 14,
-    color: COLORS.text,
+    color: COLORS.black,
   },
 });
 

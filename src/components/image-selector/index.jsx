@@ -27,26 +27,32 @@ const ImageSelector = ({ profileImage, onSelect }) => {
 
   console.warn({ image });
   const onHandleTakePhoto = async () => {
-    // const isMediaPermission = await verifyPermissions();
-    const isCameraPermission = await verifyPermissions();
-    if (!isCameraPermission) return;
-    // const result = await launchImageLibraryAsync({
-    //   mediaTypes: "Images",
-    //   allowsEditing: true,
-    //   aspect: [16, 9],
-    //   quality: 0.5,
-    // });
-    const result = await launchCameraAsync({
-      mediaTypes: "Images",
-      allowsEditing: true,
-      aspect: [16, 9],
-      quality: 0.5,
-      base64: true,
-    });
+    try {
+        // const isMediaPermission = await verifyPermissions();
+        const isCameraPermission = await verifyPermissions();
+        if (!isCameraPermission) return;
+        // const result = await launchImageLibraryAsync({
+        //   mediaTypes: "Images",
+        //   allowsEditing: true,
+        //   aspect: [16, 9],
+        //   quality: 0.5,
+        // });
+        const result = await launchCameraAsync({
+        mediaTypes: "Images",
+        allowsEditing: true,
+        aspect: [16, 9],
+        quality: 0.5,
+        base64: true,
+        });
 
-    await onSelect({ uri: result.assets[0].uri, base64: result.assets[0].base64 });
-    setImage(result.assets[0].uri);
-    console.log({ assets: result.assets });
+        console.log(result);
+
+        await onSelect({ uri: result.assets[0].uri, base64: result.assets[0].base64 });
+        setImage(result.assets[0].uri);
+        console.log({ assets: result.assets });
+    } catch (error) {
+        console.error("Error while taking photo:", error);
+    }
   };
   return (
     <View style={styles.container}>

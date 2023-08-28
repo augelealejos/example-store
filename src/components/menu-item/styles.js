@@ -28,6 +28,6 @@ export const styles = StyleSheet.create({
   title: {
     fontFamily: FONTS.medium,
     fontSize: 14,
-    color: COLORS.text,
+    color: COLORS.black,
   },
 });
