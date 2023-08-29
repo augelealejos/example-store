@@ -63,6 +63,10 @@ const Auth = () => {
     }
   };
 
+  const onHandlerInputChange = ({ name, value }) => {
+    onInputChange({ name, value, dispatch: dispatchFormState, formState });
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.content}>

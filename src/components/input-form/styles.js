@@ -15,12 +15,10 @@ export const styles = StyleSheet.create({
   },
   errorContainer: {
     flex: 1,
-    marginVertical: 5,
   },
   error: {
     fontSize: 12,
     fontFamily: FONTS.regular,
-    paddingVertical: 5,
     color: COLORS.danger,
   },
 });
