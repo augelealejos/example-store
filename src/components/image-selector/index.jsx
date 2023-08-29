@@ -25,7 +25,6 @@ const ImageSelector = ({ profileImage, onSelect }) => {
     return true;
   };
 
-  console.warn({ image });
   const onHandleTakePhoto = async () => {
     try {
         // const isMediaPermission = await verifyPermissions();
@@ -45,11 +44,8 @@ const ImageSelector = ({ profileImage, onSelect }) => {
         base64: true,
         });
 
-        console.log(result);
-
         await onSelect({ uri: result.assets[0].uri, base64: result.assets[0].base64 });
         setImage(result.assets[0].uri);
-        console.log({ assets: result.assets });
     } catch (error) {
         console.error("Error while taking photo:", error);
     }

@@ -1,19 +1,19 @@
-import { View, Text } from "react-native";
-import { useState } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
-import { LocationSelector } from "../../components";
 
-const Address = () => {
-  const [location, setLocation] = useState(null);
+const Address = ({ navigation }) => {
 
-  const onLocation = () => {
-    setLocation(location);
+  const handlePress = () => {
+    navigation.navigate("CreateAddress");
   };
-
 
   return (
     <View style={styles.container}>
-      <LocationSelector onLocation={onLocation} />
+      <TouchableOpacity style={styles.floatingButton} onPress={handlePress}>
+        <View style={styles.floatingButtonTextContainer}>
+          <Text style={styles.floatingButtonText}>+</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };

@@ -6,12 +6,11 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
+    gap: 20,
   },
   preview: {
     width: 350,
     height: 220,
-    justifyContent: "center",
-    alignItems: "center",
     borderColor: COLORS.primary,
     borderWidth: 1,
     marginVertical: 15,
@@ -21,9 +20,8 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: FONTS.medium,
   },
-  location: {
-    color: COLORS.black,
-    fontSize: 14,
-    fontFamily: FONTS.bold,
+  buttonContainer: {
+    flex: 1,
+    width: 350
   },
 });

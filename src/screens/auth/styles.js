@@ -2,11 +2,14 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONTS } from "../../themes";
 
 export const styles = StyleSheet.create({
+  containerKeyboardAvoidingView: {
+    flex: 1,
+    backgroundColor: COLORS.white,
+  },
   container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: COLORS.primary,
   },
   content: {
     width: "80%",

@@ -5,6 +5,7 @@ import authReducer from "./auth/auth.slice";
 import cartReducer from "./cart/cart.slice";
 import { categoriesApi } from "./categories/api";
 import { productsApi } from "./products/api";
+import { mapsApi } from "./maps/api";
 import { ordersApi } from "./orders/api";
 import categoriesReducer from "./categories/categories.slice";
 import productsReducer from "./products/products.slice";
@@ -21,8 +22,8 @@ export const store = configureStore({
     [ordersApi.reducerPath]: ordersApi.reducer,
     [authApi.reducerPath]: authApi.reducer,
     [settingsApi.reducerPath]: settingsApi.reducer,
+    [mapsApi.reducerPath]: mapsApi.reducer,
   },
-  middleware: (getDefaultMiddleware) =>  getDefaultMiddleware().concat(categoriesApi.middleware, productsApi.middleware, ordersApi.middleware, authApi.middleware, settingsApi.middleware),
-});
+  middleware: (getDefaultMiddleware) =>  getDefaultMiddleware().concat(categoriesApi.middleware, productsApi.middleware, ordersApi.middleware, authApi.middleware, settingsApi.middleware, mapsApi.middleware)});
 
 setupListeners(store.dispatch);

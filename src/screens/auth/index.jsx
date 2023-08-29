@@ -1,5 +1,5 @@
 import { useReducer, useState } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, KeyboardAvoidingView } from "react-native";
 import { useDispatch } from "react-redux";
 import { styles } from "./styles";
 import { InputForm } from "../../components";
@@ -68,6 +68,7 @@ const Auth = () => {
   };
 
   return (
+    <KeyboardAvoidingView style={styles.containerKeyboardAvoidingView} behavior="height">
     <View style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.header}>{headerTitle}</Text>
@@ -98,20 +99,21 @@ const Auth = () => {
           hasError={formState.password.hasError}
         />
         <View style={styles.linkContainer}>
-        <TouchableOpacity
-            disabled={!formState.isFormValid}
-            style={!formState.isFormValid ? styles.buttonDisabled : styles.button}
-            onPress={onHandlerAuth}>
+          <TouchableOpacity style={styles.link} onPress={() => setIsLogin(!isLogin)}>
             <Text style={styles.linkText}>{messageText}</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={onHandlerAuth}>
+          <TouchableOpacity
+            disabled={!formState.isFormValid}
+            style={!formState.isFormValid ? styles.buttonDisabled : styles.button}
+            onPress={onHandlerAuth}>
             <Text style={styles.buttonText}>{buttonTitle}</Text>
           </TouchableOpacity>
         </View>
       </View>
     </View>
+  </KeyboardAvoidingView>
   );
 };
 
