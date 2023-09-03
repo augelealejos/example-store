@@ -1,11 +1,11 @@
 import { Ionicons } from "@expo/vector-icons";import { useState } from "react";
-import { View, Text, TouchableOpacity, FlatList, ImageBackground, ActivityIndicator, } from "react-native";
+import { View, Text, FlatList, ActivityIndicator, } from "react-native";
 import { Input } from "../../components";
 import { useGetProductsByCategoryQuery } from "../../store/products/api";
 import ProductItem from "../../components/products/item/index";
-import { useSelector } from "react-redux";
 import { styles } from "./styles";
 import { COLORS } from "../../themes";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 
 function Product({ navigation, route }) {
@@ -42,7 +42,7 @@ function Product({ navigation, route }) {
   );
 
   return (
-    <View style={styles.container}>
+    <GestureHandlerRootView style={styles.container}>
       <View style={styles.header}>
         <Input
           onHandleBlur={onHandleBlur}
@@ -78,7 +78,7 @@ function Product({ navigation, route }) {
           <Text style={styles.notFoundText}>No products found :(</Text>
         </View>
       )}
-    </View>
+    </GestureHandlerRootView>
   );
 }
 

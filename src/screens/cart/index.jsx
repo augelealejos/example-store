@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
+import { FlatList, GestureHandlerRootView } from "react-native-gesture-handler";
 import { useDispatch, useSelector } from "react-redux";
 import { styles } from "./styles";
 import { CartItem } from "../../components";
@@ -63,7 +63,7 @@ const Cart = ({ navigation }) => {
   }
 
   return (
-    <View style={styles.container}>
+    <GestureHandlerRootView style={styles.container}>
       <FlatList
         data={cart}
         renderItem={({ item }) => (
@@ -86,7 +86,7 @@ const Cart = ({ navigation }) => {
           </View>
         </TouchableOpacity>
       </View>
-    </View>
+    </GestureHandlerRootView>
   );
 };
 

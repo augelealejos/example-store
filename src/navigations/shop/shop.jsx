@@ -1,14 +1,17 @@
 import { Ionicons } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Animated, StyleSheet, TouchableOpacity } from "react-native";
+import { Platform, Animated, StyleSheet, TouchableOpacity } from "react-native";
+import { useDispatch } from "react-redux";
 import SettingsNavigator from "../settings/settings";
 import { Categories, Products, ProductDetail } from "../../screens";
+import { logout } from "../../store/auth/auth.slice";
 import { styles } from "./styles";
 import { COLORS, FONTS } from "../../themes";
 
 const Stack = createNativeStackNavigator();
 
 function ShopNavigator() {
+  const dispatch = useDispatch();
   return (
     <Stack.Navigator
       initialRouteName="Categories"
@@ -28,6 +31,11 @@ function ShopNavigator() {
             style={styles.icon}
             onPress={() => navigation.navigate("SettingsStack")}>
             <Ionicons name="settings-outline" size={24} color={COLORS.white} />
+          </TouchableOpacity>
+        ),
+        headerLeft: () => (
+          <TouchableOpacity style={styles.icon} onPress={() => dispatch(logout())}>
+            <Ionicons name="ios-log-out-outline" size={24} color={COLORS.white} />
           </TouchableOpacity>
         ),
       })}

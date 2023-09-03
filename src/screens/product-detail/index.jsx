@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity, ActivityIndicator } from "react-native";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { styles } from "./styles";
 import { addToCart } from "../../store/cart/cart.slice";
 import { useGetProductByIdQuery } from "../../store/products/api";
@@ -25,7 +25,7 @@ function ProductDetail({ navigation, route }) {
   return (
     <View style={styles.container}>
       <View style={[styles.containerImage, { backgroundColor: color }]}>
-        <Image source={{ uri: product.image }} style={styles.image} resizeMode="contain" />
+        <Image source={{ uri: product.image }} style={styles.image} resizeMode="cover" />
       </View>
       <View style={styles.content}>
         <Text style={styles.name}>{product.name}</Text>

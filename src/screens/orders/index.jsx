@@ -1,5 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
+import { FlatList, GestureHandlerRootView } from "react-native-gesture-handler";
 import { styles } from "./styles";
 import { OrderItem } from "../../components";
 import { useGetOrdersQuery } from "../../store/orders/api";
@@ -12,9 +11,9 @@ const Orders = () => {
   const keyExtractor = (item) => item.id.toString();
 
   return (
-    <View style={styles.container}>
+    <GestureHandlerRootView style={styles.container}>
       <FlatList data={data} renderItem={renderItem} keyExtractor={keyExtractor} />
-    </View>
+    </GestureHandlerRootView>
   );
 };
 

@@ -16,7 +16,7 @@ function ProductItem({ navigation, item, color }) {
         source={{ uri: item.image }}
         style={[styles.productImage, { backgroundColor: color }]}
         resizeMethod="resize"
-        resizeMode="contain"
+        resizeMode="cover"
       />
       <View style={styles.productDetail}>
         <Text style={styles.productName} numberOfLines={1} ellipsizeMode="tail">

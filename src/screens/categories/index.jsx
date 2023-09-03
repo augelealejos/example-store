@@ -1,11 +1,11 @@
 import { ActivityIndicator, FlatList, View } from "react-native";
 import { CategoryItem } from "../../components";
-import { useSelector } from "react-redux";
 import { styles } from "./styles";
 import { ORIENTATION } from "../../constants/orientation";
 import useOrientation from "../../hooks/useOrientation";
 import { useGetCategoriesQuery } from "../../store/categories/api";
 import { COLORS } from "../../themes";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 function Categories({ navigation }) {
   const { data, error, isLoading } = useGetCategoriesQuery();
@@ -24,7 +24,7 @@ function Categories({ navigation }) {
   );
 
   return (
-    <View style={styles.container}>
+    <GestureHandlerRootView style={styles.container}>
       <View style={styles.container}>
         <FlatList
           data={data}
@@ -47,7 +47,7 @@ function Categories({ navigation }) {
           showsVerticalScrollIndicator={false}
         />
       </View>
-    </View>
+    </GestureHandlerRootView>
   );
 }
 

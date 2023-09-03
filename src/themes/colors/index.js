@@ -1,11 +1,11 @@
 export const COLORS = {
-    primary: "#6A8CB4",
-    secondary: "#BDE2CE",
-    accent: "#A22A3E",
-    success: "#43aa8b",
-    danger: "#fb4d3dff",
-    black: "#2a312e",
-    white: "#FCFBF6",
-    gray: "#cccccc"
+    primary: "#BEB2FB",
+    secondary: "#4D4672",
+    accent: "#5C946E",
+    success: "#43AA8B",
+    danger: "#FB4D3DFF",
+    black: "#1E102E",
+    white: "#FDFFF7",
+    gray: "#D7D7D7"
   };
   

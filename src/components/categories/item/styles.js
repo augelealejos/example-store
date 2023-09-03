@@ -17,23 +17,23 @@ export const styles = StyleSheet.create({
   imageBackground: {
     width: "100%",
     height: 150,
-    justifyContent: "flex-end",
+    justifyContent: "flex-end",    
   },
   imageBackgroundTablet: {
     width: "100%",
     height: 250,
-    justifyContent: "flex-end",
+    justifyContent: "flex-end",  
   },
   categoryName: {
     fontSize: 20,
     fontFamily: FONTS.bold,
-    color: COLORS.white,
+    color: COLORS.secondary,
     padding: 20,
   },
   categoryNameTablet: {
     fontSize: 35,
     fontFamily: FONTS.bold,
-    color: COLORS.white,
+    color: COLORS.secondary,
     padding: 20,
   },
 });

@@ -18,14 +18,14 @@ const cartSlice = createSlice({
       ) {
         return;
       }
-
       if (itemInCart?.stock > itemInCart?.quantity) {
         itemInCart.quantity += 1;
-        state.total = sumTotal(state.items);
+        // state.total = sumTotal(state.items);
       }
       if (!itemInCart) {
         state.items.push(action.payload);
-      }
+      }      
+      state.total = sumTotal(state.items);
     },
     increaseItemQuantity: (state, action) => {
       const itemInCart = state.items.find((item) => item.id === action.payload.id);

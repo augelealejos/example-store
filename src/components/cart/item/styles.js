@@ -39,18 +39,22 @@ export const styles = StyleSheet.create({
   },
   name: {
     fontSize: 13,
+    color: COLORS.black,
     fontFamily: FONTS.regular,
   },
   price: {
     fontSize: 13,
+    color: COLORS.black,
     fontFamily: FONTS.bold,
   },
   qty: {
     fontSize: 12,
+    color: COLORS.black,
     fontFamily: FONTS.regular,
   },
   stock: {
     fontSize: 12,
+    color: COLORS.black,
     fontFamily: FONTS.regular,
   },
   actionContainer: {
