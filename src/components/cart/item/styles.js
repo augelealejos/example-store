@@ -9,14 +9,7 @@ export const styles = StyleSheet.create({
     height: 150,
     backgroundColor: COLORS.white,
     borderRadius: 20,
-    shadowColor: COLORS.black,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3,
+    
     padding: 10,
     marginHorizontal: 15,
     marginTop: 15,

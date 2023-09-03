@@ -8,14 +8,7 @@ export const styles = StyleSheet.create({
   containerImage: {
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
-    shadowColor: COLORS.black,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3,
+    
   },
   image: {
     width: "100%",
@@ -50,14 +43,7 @@ export const styles = StyleSheet.create({
   containerTag: {
     padding: 10,
     borderRadius: 10,
-    shadowColor: COLORS.black,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3,
+    
   },
   tag: {
     color: COLORS.white,
@@ -72,14 +58,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    shadowColor: COLORS.black,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3,
+    
   },
   addToCartText: {
     fontFamily: FONTS.bold,

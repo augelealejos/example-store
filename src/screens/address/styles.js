@@ -14,14 +14,7 @@ export const styles = StyleSheet.create({
     height: 60,
     borderRadius: 30,
     backgroundColor: COLORS.primary,
-    shadowColor: COLORS.black,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3,
+    
   },
   floatingButtonTextContainer: {
     flex: 1,
@@ -39,14 +32,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 15,
     backgroundColor: COLORS.white,
-    shadowColor: COLORS.black,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3, 
+     
     borderRadius: 10,
     gap: 10,
     justifyContent: "center",

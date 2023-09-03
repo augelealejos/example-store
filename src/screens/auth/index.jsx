@@ -17,7 +17,6 @@ const initialState = {
 const formReducer = (state, action) => {
   switch (action.type) {
     case UPDATE_FORM:
-      // eslint-disable-next-line no-case-declarations
       const { name, value, hasError, error, touched, isFormValid } = action.data;
       return {
         ...state,
@@ -70,8 +69,8 @@ const Auth = () => {
   return (
     <KeyboardAvoidingView style={styles.containerKeyboardAvoidingView} behavior="height">
     <View style={styles.container}>
-      <View style={styles.content}>
-        <Text style={styles.header}>{headerTitle}</Text>
+      <Text style={styles.header}>{headerTitle}</Text>
+      <View style={styles.content}>        
         <InputForm
           placeholder="email@domain.com"
           placeholderTextColor={COLORS.gray}
