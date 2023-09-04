@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   },
   goBackText: {
     fontSize: 14,
-    color: COLORS.black,
+    color: COLORS.secondary,
   },
   icon: {
     marginRight: Platform.OS === "android" ? 15 : 0,

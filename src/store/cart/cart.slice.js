@@ -20,7 +20,6 @@ const cartSlice = createSlice({
       }
       if (itemInCart?.stock > itemInCart?.quantity) {
         itemInCart.quantity += 1;
-        // state.total = sumTotal(state.items);
       }
       if (!itemInCart) {
         state.items.push(action.payload);

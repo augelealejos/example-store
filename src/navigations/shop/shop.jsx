@@ -1,6 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Platform, Animated, StyleSheet, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
 import { useDispatch } from "react-redux";
 import SettingsNavigator from "../settings/settings";
 import { Categories, Products, ProductDetail } from "../../screens";

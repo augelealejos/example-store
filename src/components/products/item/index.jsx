@@ -15,6 +15,7 @@ function ProductItem({ navigation, item, color }) {
       <ImageBackground
         source={{ uri: item.image }}
         style={[styles.productImage, { backgroundColor: color }]}
+        imageStyle={{ borderTopLeftRadius: 20, borderTopRightRadius: 20}}
         resizeMethod="resize"
         resizeMode="cover"
       />

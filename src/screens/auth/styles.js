@@ -4,7 +4,7 @@ import { COLORS, FONTS } from "../../themes";
 export const styles = StyleSheet.create({
   containerKeyboardAvoidingView: {
     flex: 1,
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.primary,
   },
   container: {
     flex: 1,
@@ -20,14 +20,13 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     borderWidth: 1,
     borderColor: COLORS.primary,
-    
     borderRadius: 5,
   },
   header: {
     fontFamily: FONTS.bold,
     fontSize: 16,
     textAlign: "center",
-    color: COLORS.black,
+    color: COLORS.white,
     paddingVertical: 10,
   },
   linkContainer: {

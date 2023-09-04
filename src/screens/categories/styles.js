@@ -1,10 +1,9 @@
 import { StyleSheet } from "react-native";
-import { COLORS, FONTS } from "../../themes";
+import { FONTS } from "../../themes";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.white,
   },
   categoryContainer: {
     marginTop: 15,

@@ -1,10 +1,11 @@
 import { View, Text, TouchableOpacity } from "react-native";
-import { FlatList, GestureHandlerRootView } from "react-native-gesture-handler";
 import { useDispatch, useSelector } from "react-redux";
 import { styles } from "./styles";
 import { CartItem } from "../../components";
 import { clearCart, decreaseItemQuantity, increaseItemQuantity, removeItemFromCart, } from "../../store/cart/cart.slice";
 import { useCreateOrderMutation } from "../../store/orders/api";
+import Empty from "../../components/empty";
+import { FlatList, GestureHandlerRootView } from "react-native-gesture-handler";
 
 const Cart = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -56,9 +57,7 @@ const Cart = ({ navigation }) => {
 
   if (cart.length === 0) {
     return (
-      <View style={styles.emptyCartContainer}>
-        <Text style={styles.emptyCartText}>Your cart is empty :(</Text>
-      </View>
+      <Empty message="Your cart is empty" />
     );
   }
 

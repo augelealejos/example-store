@@ -7,6 +7,7 @@ import { useSignInMutation, useSignUpMutation } from "../../store/auth/api";
 import { setUser } from "../../store/auth/auth.slice";
 import { COLORS } from "../../themes";
 import { UPDATE_FORM, onInputChange } from "../../utils/form";
+import { useCreateUserMutation } from "../../store/users/api";
 
 const initialState = {
   email: { value: "", error: "", touched: false, hasError: true },
@@ -43,8 +44,8 @@ const Auth = () => {
   const messageText = isLogin ? "Need an account?" : "Already have an account?";
 
   const [signIn, { data }] = useSignInMutation();
-
   const [signUp] = useSignUpMutation();
+  const [createUser] = useCreateUserMutation();
 
   const onHandlerAuth = async () => {
     try {
@@ -55,7 +56,8 @@ const Auth = () => {
         });
         if (result?.data) dispatch(setUser(result.data));
       } else {
-        await signUp({ email: formState.email.value, password: formState.password.value });
+        const result = await signUp({ email: formState.email.value, password: formState.password.value });
+        await createUser({ id: result.localId, profileImage: '' });
       }
     } catch (error) {
       console.error(error);

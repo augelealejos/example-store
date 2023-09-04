@@ -1,12 +1,13 @@
-import { Ionicons } from "@expo/vector-icons";import { useState } from "react";
-import { View, Text, FlatList, ActivityIndicator, } from "react-native";
-import { Input } from "../../components";
+import { Ionicons } from "@expo/vector-icons";
+import { useState } from "react";
+import { View, FlatList } from "react-native";
+import { Empty, Input } from "../../components";
 import { useGetProductsByCategoryQuery } from "../../store/products/api";
 import ProductItem from "../../components/products/item/index";
 import { styles } from "./styles";
 import { COLORS } from "../../themes";
+import Loader from "../../components/loader";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-
 
 function Product({ navigation, route }) {
   const { categoryId, color } = route.params;
@@ -36,9 +37,7 @@ function Product({ navigation, route }) {
 
   if (isLoading)
   return (
-    <View style={styles.containerLoader}>
-      <ActivityIndicator size="large" color={COLORS.primary} />
-    </View>
+    <Loader />
   );
 
   return (
@@ -74,9 +73,7 @@ function Product({ navigation, route }) {
         showsVerticalScrollIndicator={false}
       />
       {filteredProducts.length === 0 && search.length > 0 && (
-        <View style={styles.notFound}>
-          <Text style={styles.notFoundText}>No products found :(</Text>
-        </View>
+        <Empty message="No products found yet :(" />
       )}
     </GestureHandlerRootView>
   );

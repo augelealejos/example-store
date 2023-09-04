@@ -1,7 +1,8 @@
 import { Ionicons } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Platform, StyleSheet, TouchableOpacity } from "react-native"; 
+import { TouchableOpacity } from "react-native"; 
 import { Address, CreateAddress, Maps, Profile, Settings } from "../../screens";
+import { styles } from "./styles";
 import { COLORS, FONTS } from "../../themes";
 
 const Stack = createNativeStackNavigator();
@@ -35,17 +36,5 @@ const SettingsNavigator = () => {
     </Stack.Navigator>
   );
 };
-
-const styles = StyleSheet.create({
-  goBack: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginRight: Platform.OS === "android" ? 15 : 0,
-  },
-  goBackText: {
-    fontSize: 14,
-    color: COLORS.black,
-  },
-});
 
 export default SettingsNavigator;

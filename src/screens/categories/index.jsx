@@ -1,10 +1,9 @@
-import { ActivityIndicator, FlatList, View } from "react-native";
-import { CategoryItem } from "../../components";
+import {FlatList, View } from "react-native";
+import { CategoryItem, Loader } from "../../components";
 import { styles } from "./styles";
 import { ORIENTATION } from "../../constants/orientation";
 import useOrientation from "../../hooks/useOrientation";
 import { useGetCategoriesQuery } from "../../store/categories/api";
-import { COLORS } from "../../themes";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 function Categories({ navigation }) {
@@ -18,9 +17,7 @@ function Categories({ navigation }) {
   if (isLoading)
 
   return (
-    <View style={styles.containerLoader}>
-      <ActivityIndicator size="large" color={COLORS.primary} />
-    </View>
+    <Loader />
   );
 
   return (

@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
   goBackText: {
     fontSize: 14,
     fontFamily: FONTS.light,
-    color: COLORS.black,
+    color: COLORS.secondary,
   },
   products: {
     flex: 1,
@@ -38,10 +38,5 @@ export const styles = StyleSheet.create({
   productsContent: {
     paddingVertical: 25,
     gap: 15,
-  },
-  containerLoader: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
 });

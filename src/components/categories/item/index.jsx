@@ -15,6 +15,7 @@ const CategoryItem = ({ id, name, backgroundColor, backgroundImage, onSelectCate
       <ImageBackground
         source={{ uri: backgroundImage }}
         style={[styles.imageBackground, style]}
+        imageStyle={{ borderRadius: 20}}
         resizeMode="cover"
       >
         <Text style={isTablet ? styles.categoryNameTablet : styles.categoryName}>{name}</Text>

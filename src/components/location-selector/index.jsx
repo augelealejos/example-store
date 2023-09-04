@@ -7,8 +7,9 @@ import { COLORS } from "../../themes";
 import { URL_MAPS } from "../../constants/maps";
 import { saveMapImageUrl } from "../../store/address/address.slice";
 import MapPreview from "../map-preview";
-  
-const LocationSelector = ({ onLocation }) => {
+import Empty from "../empty";
+
+const LocationSelector = ({ onLocation, onSelectMap, location}) => {
   const dispatch = useDispatch();
   const [pickedLocation, setPickedLocation] = useState(null);
 
@@ -46,23 +47,30 @@ const LocationSelector = ({ onLocation }) => {
     onLocation({ lat: latitude, lng: longitude });
   };
 
-  
+  const onHandlerSelectOnMap = async () => {
+    onSelectMap();
+  };
+
   useEffect(() => {
     if (pickedLocation) {
       dispatch(saveMapImageUrl(mapPreviewUrlImage));
     }
   }, [pickedLocation]);
 
-
+  useEffect(() => {
+    if (location) {
+      setPickedLocation(location)
+    }
+  }, [location]);
 
   return (
     <View style={styles.container}>
-            <MapPreview location={pickedLocation} style={styles.preview} mapImage={mapPreviewUrlImage}>
-        <Text style={styles.text}>No location chosen yet!</Text>
+      <MapPreview location={pickedLocation} style={styles.preview} mapImage={mapPreviewUrlImage}>
+        <Empty message="No location chosen yet" />
       </MapPreview>
       <View style={styles.buttonContainer}>
         <Button title="Get User Location" onPress={onHandlerGetLocation} color={COLORS.primary} />
-        <Button title="Select on map" onPress={onHandlerGetLocation} color={COLORS.primary} />
+        <Button title="Select on map" onPress={onHandlerSelectOnMap} color={COLORS.primary} />
       </View>
     </View>
   );

@@ -1,10 +1,8 @@
-import { ActivityIndicator, View } from "react-native";
+import { View } from "react-native";
 import { useSelector } from "react-redux";
-
 import { styles } from "./styles";
-import { ImageSelector } from "../../components";
+import { ImageSelector, Loader } from "../../components";
 import { useGetProfileQuery, useUpdateImageProfileMutation } from "../../store/settings/api";
-import { COLORS } from "../../themes";
 
 const Profile = () => {
   const localId = useSelector((state) => state.auth.user.localId);
@@ -19,9 +17,7 @@ const Profile = () => {
       <View style={styles.header}>
         <ImageSelector profileImage={userData?.profileImage} onSelect={onHandlerImage} />
         {isLoading && (
-          <View style={styles.loading}>
-            <ActivityIndicator size="large" color={COLORS.primary} />
-          </View>
+          <Loader />
         )}
       </View>
     </View>

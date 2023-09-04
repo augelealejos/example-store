@@ -7,8 +7,7 @@ export const styles = StyleSheet.create({
   },
   containerImage: {
     borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    
+    borderBottomRightRadius: 20,    
   },
   image: {
     width: "100%",
@@ -20,18 +19,22 @@ export const styles = StyleSheet.create({
     gap: 10,
   },
   name: {
+    color: COLORS.secondary,
     fontFamily: FONTS.bold,
     fontSize: 18,
   },
   description: {
+    color: COLORS.secondary,
     fontFamily: FONTS.regular,
     fontSize: 14,
   },
   tagTitle: {
+    color: COLORS.secondary,
     fontFamily: FONTS.bold,
     fontSize: 16,
   },
   price: {
+    color: COLORS.secondary,
     fontFamily: FONTS.bold,
     fontSize: 20,
   },
@@ -69,5 +72,26 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },  
+  footerContainer: {
+    width: "100%",
+    backgroundColor: COLORS.primary,
+    borderTopColor: COLORS.primary,
+    borderTopWidth: 4,
+    padding: 10,
+  },
+  addToCart: {
+    backgroundColor: COLORS.primary,
+    borderRadius: 5,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    height: 50,
+  },
+  addToCartText: {
+    color: COLORS.white,
+    fontFamily: FONTS.bold,
   },
 });

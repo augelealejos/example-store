@@ -25,7 +25,8 @@ export const styles = StyleSheet.create({
   },
   productName: {
     fontSize: 14,
-    fontFamily: FONTS.light,
+    fontFamily: FONTS.bold,
+    color: COLORS.secondary
   },
   productPrice: {
     fontSize: 15,

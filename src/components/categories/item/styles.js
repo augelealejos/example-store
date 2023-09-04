@@ -5,10 +5,10 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     borderRadius: 20,
-    
   },
   imageBackground: {
-    width: "100%",
+    width: "100%",    
+    borderRadius: 20,
     height: 150,
     justifyContent: "flex-end",    
   },

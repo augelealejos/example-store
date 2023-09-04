@@ -1,11 +1,12 @@
 import { useFonts } from "expo-font";
-import { View, ActivityIndicator } from "react-native";
+import { View } from "react-native";
 import RootNavigator from "./navigations";
 import { Provider } from "react-redux";
 import { init } from "./db";
 import { store } from "./store";
 import { styles } from "./styles";
-import { FONTS, COLORS } from "./themes";
+import { FONTS } from "./themes";
+import { Loader } from "./components";
 
 init().then(() => {
   console.log("Initialized database");
@@ -24,9 +25,7 @@ export default function App() {
 
   if (!loaded) {
     return (
-      <View style={styles.loaderContainer}>
-        <ActivityIndicator color={COLORS.primary} size="large" />
-      </View>
+      <Loader />
     );
   }
 

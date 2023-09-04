@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-
 import { COLORS, FONTS } from "../../../themes";
 
 export const styles = StyleSheet.create({
@@ -9,7 +8,6 @@ export const styles = StyleSheet.create({
     height: 150,
     backgroundColor: COLORS.white,
     borderRadius: 20,
-    
     padding: 10,
     marginHorizontal: 15,
     marginTop: 15,
@@ -32,22 +30,22 @@ export const styles = StyleSheet.create({
   },
   name: {
     fontSize: 13,
-    color: COLORS.black,
+    color: COLORS.secondary,
     fontFamily: FONTS.regular,
   },
   price: {
     fontSize: 13,
-    color: COLORS.black,
+    color: COLORS.secondary,
     fontFamily: FONTS.bold,
   },
   qty: {
     fontSize: 12,
-    color: COLORS.black,
+    color: COLORS.secondary,
     fontFamily: FONTS.regular,
   },
   stock: {
     fontSize: 12,
-    color: COLORS.black,
+    color: COLORS.secondary,
     fontFamily: FONTS.regular,
   },
   actionContainer: {

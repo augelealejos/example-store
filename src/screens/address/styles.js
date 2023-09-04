@@ -4,51 +4,25 @@ import { COLORS, FONTS } from "../../themes";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.white,
   },
-  floatingButton: {
-    position: "absolute",
-    bottom: 20,
-    right: 20,
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+  footerContainer: {
     backgroundColor: COLORS.primary,
-    
+    borderTopColor: COLORS.primary,
+    borderTopWidth: 4,
+    padding: 10,
   },
-  floatingButtonTextContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  floatingButtonText: {
-    fontSize: 25,
-    fontFamily: FONTS.medium,
-    color: COLORS.white,
-  },
-  itemContainer: {
+  addAddress: {
+    backgroundColor: COLORS.primary,
+    borderRadius: 5,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
     flexDirection: "row",
-    padding: 20,
-    marginHorizontal: 20,
-    marginTop: 15,
-    backgroundColor: COLORS.white,
-     
-    borderRadius: 10,
-    gap: 10,
     justifyContent: "center",
     alignItems: "center",
+    height: 50,
   },
-  mapImageContainer: {
-    backgroundColor: COLORS.primary,
+  addAddressText: {
+    color: COLORS.white,
+    fontFamily: FONTS.bold,
   },
-  mapImage: {
-    width: 80,
-    height: 80,
-  },
-  itemDetailsContainer: {
-    flex: 1,
-    gap: 10,
-  },
-  itemAddress: {},
-  itemCoords: {},
 });
